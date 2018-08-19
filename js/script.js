@@ -1,13 +1,12 @@
-
-var button = document.querySelector('.button');
-button.onclick = function() {
-	var recursion = function(number) {
+const button = document.querySelector('.button');
+button.onclick = () => {
+	let recursion = (number) => {
     	if (number > 0) {
-    	var container = document.body.children[0];	
-		var block = container.children[1];
-		var ul = block.children[0];
-		var li = document.createElement('li');
-		var size = number * 10 +'px';
+    	const container = document.body.children[0];	
+		const block = container.children[1];
+		const ul = block.children[0];
+		let li = document.createElement('li');
+		let size = number * 10 +'px';
 		li.style.fontSize = size;
 		ul.appendChild(li);
 		li.insertAdjacentHTML("afterBegin", number);
